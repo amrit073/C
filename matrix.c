@@ -11,7 +11,7 @@ void main(){
                 // printf("%d\n", matrix1[i][k] * matrix2[k][j]);
             }
             matrix_product[i][j] = sum;
-            printf("%d\n", sum);
+            printf("hi");
         }
     }
 }
