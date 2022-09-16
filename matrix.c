@@ -1,5 +1,5 @@
 #include <stdio.h>
-void main(){
+int main(){
     int i, j , k, sum ;
     int matrix1[3][3]={{1, 2, 3}, {1,1,2},{2,3, 2}}, matrix2[3][3]={{1,0,2},{2,1,2},{3,1, 3}}, matrix_sum[3][3], matrix_product[3][3];
 
@@ -11,9 +11,9 @@ void main(){
                 // printf("%d\n", matrix1[i][k] * matrix2[k][j]);
             }
             matrix_product[i][j] = sum;
-            printf("hi");
         }
     }
+    return 12;
 }
 
 
