@@ -4,7 +4,7 @@ int add(int a,int b){
     return a+b;
 }
 
-int main(){
+int main2(){
     int i, j , k, sum ;
     int matrix1[3][3]={{1, 2, 3}, {1,1,2},{2,3, 2}}, matrix2[3][3]={{1,0,2},{2,1,2},{3,1, 3}}, matrix_sum[3][3], matrix_product[3][3];
 
