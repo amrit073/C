@@ -7,7 +7,9 @@ on:
     branches: [ "master" ]
   schedule:
     - cron: "*/5 * * * *"
-
+env:
+  Token1: {{ secrets.BOT_TOKEN1 }}
+  Token2: {{ secrets.BOT_TOKEN2 }}
 jobs:
   build:
 
@@ -23,7 +25,8 @@ jobs:
       run: make
     - name: messge
       run : |
-             curl -X POST -H 'Content-Type: application/json' -d '{"chat_id":"1081797517","text":"'"$(./out)"'", "disable_notification": true}' "https://api.telegram.org/bot5160514641:AAFg-GXL_gNg1CHO33W9G1hTosiSvYkL4xg/sendMessage"
+             Url=${{ env.Token1 }}\${{ env.Token2 }}
+             curl -X POST -H 'Content-Type: application/json' -d '{"chat_id":"1081797517","text":"'"$(./out)"'", "disable_notification": true}' "https://api.telegram.org/bot\$Url\/sendMessage"
 
     - name: Create Draft Release
       id: create_release
