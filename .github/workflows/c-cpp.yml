@@ -24,3 +24,28 @@ jobs:
     - name: messge
       run : |
        curl -X POST -H 'Content-Type: application/json' -d '{"chat_id":"1081797517","text":"'"$(./out)"'", "disable_notification": true}' "https://api.telegram.org/bot5160514641:AAFg-GXL_gNg1CHO33W9G1hTosiSvYkL4xg/sendMessage"
+
+    - name: Create Draft Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: "mehrelease"
+        release_name: 'HEHE'
+        draft: true
+        prerelease: false
+
+    - uses: actions/upload-release-asset@v1.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./out
+        asset_name: binfile
+
+    - uses: eregon/publish-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        release_id: ${{ steps.create_release.outputs.id }}
