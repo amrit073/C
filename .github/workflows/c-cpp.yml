@@ -24,7 +24,7 @@ jobs:
         echo "::set-output name=outdated::$(./out)"
     - name: messge
       run : |
-       curl -X POST -H 'Content-Type: application/json' -d '{"chat_id":"1081797517","text":"$( echo steps.upload.outputs.outdated )", "disable_notification": true}' "https://api.telegram.org/bot5160514641:AAFg-GXL_gNg1CHO33W9G1hTosiSvYkL4xg/sendMessage"
+       curl -X POST -H 'Content-Type: application/json' -d '{"chat_id":"1081797517","text":$( echo steps.upload.outputs.outdated ), "disable_notification": true}' "https://api.telegram.org/bot5160514641:AAFg-GXL_gNg1CHO33W9G1hTosiSvYkL4xg/sendMessage"
 
 
 
