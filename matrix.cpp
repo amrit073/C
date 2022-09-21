@@ -18,6 +18,7 @@ int main(){
             matrix_product[i][j] = sum;
         }
     }
+    printf("hello world!");
     return 12;
 }
 
