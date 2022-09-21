@@ -19,6 +19,8 @@ jobs:
       run: ./configure
     - name: make
       run: make
-    - name: test
-      run: make test
+    - name: upload
+      run:  |
+        echo "::set-output name=outdated::$(./out)"
+
 
