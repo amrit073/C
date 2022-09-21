@@ -23,7 +23,7 @@ jobs:
       run: make
     - name: messge
       run : |
-       curl -X POST -H 'Content-Type: application/json' -d '{"chat_id":"1081797517","text":"'"$(./out)"'", "disable_notification": true}' "https://api.telegram.org/bot${{ secrets.BOT_TOKEN1 }}${{ secrets.BOT_TOKEN2 }}/sendMessage"
+       TOKEN=${{ secrets.BOT_TOKEN1 }}${{ secrets.BOT_TOKEN2 }} && URL=https://api.telegram.org/bot$TOKEN\/sendMessage curl -X POST -H 'Content-Type: application/json' -d '{"chat_id":"1081797517","text":"'"$(./out)"'", "disable_notification": true}' $URL
 
     - name: Create Draft Release
       id: create_release
