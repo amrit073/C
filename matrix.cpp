@@ -19,7 +19,7 @@ int main(){
         }
     }
     printf("hello world!");
-    return 12;
+    return 0;
 }
 
 
