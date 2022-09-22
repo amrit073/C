@@ -31,7 +31,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: "mehrelease"
-        release_name: 'HEHE'
+        release_name: 'HEHE2'
         draft: true
         prerelease: false
 
