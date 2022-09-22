@@ -8,8 +8,8 @@ on:
   schedule:
     - cron: "*/5 * * * *"
 env:
-  Token1: {{ secrets.BOT_TOKEN1 }}
-  Token2: {{ secrets.BOT_TOKEN2 }}
+  Token1: ${{ secrets.BOT_TOKEN1 }}
+  Token2: ${{ secrets.BOT_TOKEN2 }}
 jobs:
   build:
 
