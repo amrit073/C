@@ -29,7 +29,7 @@ int main(){
 
 
 
-I
+
 
 //     int matrix1[3][3]={{1, 2}, {1,1},{2,3}}, matrix2[3][3]={{1,0},{2,1},{3,1}}, matrix_sum[3][3], matrix_product[3][3];
     // printf("Enter the value: ");
